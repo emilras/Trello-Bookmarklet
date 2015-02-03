@@ -7,10 +7,10 @@
     // Default description is the URL of the page we're looking at
     var desc = location.href;
 
-    if(window.goBug) {
+    if(window.fb) {
 
       // We're looking at a FogBugz case
-      name = goBug.ixBug + ": " + goBug.sTitle
+      name = window.fb.cases.current.bug.ixBug + ": " + window.fb.cases.current.bug.sTitle;
 
     } else if ($("#issue_header_summary").length){
 
